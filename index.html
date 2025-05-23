@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Voluntários</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loginPage" class="page">
+        <div class="login-container">
+            <h1>Plataforma de Voluntários</h1>
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="username">Usuário</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit">Entrar</button>
+                <p class="login-help">Usuário: admin / Senha: admin123</p>
+            </form>
+        </div>
+    </div>
+
+    <div id="appPage" class="page hidden">
+        <nav class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><button class="nav-button active" data-page="dashboard">Início</button></li>
+                <li><button class="nav-button" data-page="register">Cadastro</button></li>
+                <li><button class="nav-button" data-page="list">Lista</button></li>
+            </ul>
+            <button id="logoutButton" class="logout-button">Sair</button>
+        </nav>
+
+        <main id="dashboard" class="content">
+            <h2>Dashboard</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Total de Voluntários</h3>
+                    <p id="volunteerCount">0</p>
+                </div>
+            </div>
+        </main>
+
+        <main id="register" class="content hidden">
+            <h2>Cadastro de Voluntário</h2>
+            <form id="volunteerForm" class="volunteer-form">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" required maxlength="9">
+                </div>
+                <div id="addressInfo" class="address-info hidden">
+                    <p id="addressDetails"></p>
+                </div>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </main>
+        
+        <main id="list" class="content hidden">
+            <h2>Lista de Voluntários</h2>
+            <div class="list-controls">
+                <input type="text" id="searchInput" placeholder="Filtrar por nome" class="search-input">
+                <button id="clearAll" class="danger-button">Limpar Tudo</button>
+            </div>
+            <div id="volunteerList" class="volunteer-list"></div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

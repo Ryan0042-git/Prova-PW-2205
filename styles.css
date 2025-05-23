@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.page {
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h1 {
+    text-align: center;
+    color: #006b42;
+    margin-bottom: 2rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #666;
+}
+
+.form-group input {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    background-color: #006b42;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #006b42;
+}
+
+.login-help {
+    text-align: center;
+    margin-top: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+#appPage {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background: white;
+    padding: 2rem;
+    height: 100vh;
+    position: fixed;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    color: #006b42;
+    margin-bottom: 2rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav-button {
+    width: 100%;
+    text-align: left;
+    background: none;
+    color: #666;
+    padding: 0.75rem;
+    border-radius: 4px;
+}
+
+.nav-button:hover {
+    background-color: #f5f5f5;
+}
+
+.nav-button.active {
+    background-color: #e8f5e9;
+    color: #006b42;
+}
+
+.logout-button {
+    margin-top: 2rem;
+    background-color: #d10300;
+}
+
+.logout-button:hover {
+    background-color: #d10300;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 2rem;
+    flex: 1;
+}
+
+.stats {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #006b42;
+}
+
+.volunteer-form {
+    max-width: 600px;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.address-info {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+.list-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.search-input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.danger-button {
+    background-color: #d10300;
+}
+
+.danger-button:hover {
+    background-color: #d10300;
+}
+
+.volunteer-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.volunteer-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.volunteer-card-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.volunteer-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.volunteer-info {
+    flex: 1;
+}
+
+.volunteer-info h3 {
+    margin: 0;
+    color: #333;
+}
+
+.volunteer-info p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.volunteer-card-footer {
+    background: #f5f5f5;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    color: #d10300;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.delete-button:hover {
+    color: #d10300;
+}
